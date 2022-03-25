@@ -1,0 +1,15 @@
+[masters]
+master ansible_host=ec2-18-191-70-120.us-east-2.compute.amazonaws.com private_ip=172.31.26.29 private_iface=eth0 ansible_user=ubuntu ansible_ssh_private_key_file=/home/lsaidi/kubernetes/hosts/master.pem
+
+#[workers]
+#worker1 ansible_host=ec2-54-87-198-251.compute-1.amazonaws.com private_ip=172.31.20.27 private_iface=eth0 ansible_user=ubuntu ansible_ssh_private_key_file=/home/lsaidi/kubernetes/hosts/worker1.pem
+#worker2 ansible_host=ec2-34-204-49-199.compute-1.amazonaws.com private_ip=172.31.18.206 private_iface=eth0 ansible_user=ubuntu ansible_ssh_private_key_file=/home/lsaidi/kubernetes/hosts/worker2.pem
+
+
+
+
+# ./k3s_install.sh  K3S_URL='https://172.31.26.29:6443' K3S_TOKEN="K102c8f4fe4d0a5eef854ec9208668573cb5921936a15fefae7c06715e7aff0e582::server:98b3189dfb0af14e0c902fdf2244eaad" INSTALL_K3S_EXEC="--node-ip 172.31.20.27" 
+
+
+
+# curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" INSTALL_K3S_EXEC="--node-ip 172.31.20.27" K3S_URL="https://172.31.26.29:6443" K3S_TOKEN="K102c8f4fe4d0a5eef854ec9208668573cb5921936a15fefae7c06715e7aff0e582::server:98b3189dfb0af14e0c902fdf2244eaad" sh -
