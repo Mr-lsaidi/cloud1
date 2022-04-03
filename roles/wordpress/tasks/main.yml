@@ -1,0 +1,6 @@
+---
+- name: deploy wordpress
+  docker_compose:
+    project_src: /home/ubuntu/dockerfiles
+    files:
+    - docker-compose.yml

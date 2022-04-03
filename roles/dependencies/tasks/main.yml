@@ -1,0 +1,15 @@
+---
+- name: Install aptitude using apt
+  apt: name=aptitude state=latest update_cache=yes force_apt_get=yes
+
+- name: Download docker install script
+  get_url:
+    url: https://get.docker.com
+    dest: /home/ubuntu/docker.sh
+    mode: a+x
+
+- name: install docker install script
+  shell: sh /home/ubuntu/docker.sh && sudo usermod -aG docker $USER && sudo chmod 666 /var/run/docker.sock
+
+- name: Update apt and install docker-compose
+  apt: update_cache=yes name=docker-compose state=latest

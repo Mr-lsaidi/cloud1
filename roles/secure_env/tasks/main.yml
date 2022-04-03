@@ -1,0 +1,10 @@
+---
+# tasks file for secure_env
+
+- name: set ENV's
+  shell: echo "MYSQL_ROOT={{ MYSQL_ROOT }}" > /home/ubuntu/dockerfiles/.env ;
+         echo "MYSQL_ROOT_PASSWORD={{ MYSQL_ROOT_PASSWORD }}" >> /home/ubuntu/dockerfiles/.env ;
+         echo "DB__HOST={{ DB__HOST }}" >> /home/ubuntu/dockerfiles/.env ;
+         echo "DATABASE_NAME={{ DATABASE_NAME }}" >> /home/ubuntu/dockerfiles/.env ;
+         echo "DATABASE_USER={{ DATABASE_USER }}" >> /home/ubuntu/dockerfiles/.env ;
+         echo "DB_USER_PASS={{ DB_USER_PASS }}" >> /home/ubuntu/dockerfiles/.env ;

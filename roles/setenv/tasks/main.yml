@@ -1,0 +1,9 @@
+---
+- name: copying dockerfiles folder
+  become: true
+  synchronize:
+    src: "{{ role_path }}/files/dockerfiles"
+    dest: /home/ubuntu/
+
+- name: update database
+  shell: /home/ubuntu/dockerfiles/updateIP.sh {{ inventory_hostname }}

@@ -1,0 +1,10 @@
+- hosts: aws_ec2
+  become: true
+  roles:
+    - dependencies
+    - setenv
+    - secure_env
+    - wordpress
+
+  vars_files:
+    - "./roles/secure_env/files/.env"
